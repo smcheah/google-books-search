@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import SavedPage from './pages/Saved';
 import SearchPage from './pages/Search';
 import NavBar from './components/nav-bar';
+import HeroHeader from './components/hero-header';
 
 function App () {
     return (
         <div className="App">
             <Router>
                 <NavBar />
+                <HeroHeader>
+                    <h1>Google Books Search</h1>
+                    <h2>Search for and save books of interest</h2>
+                </HeroHeader>
                 <Switch>
                     <Route exact path="/saved">
                         <SavedPage />
